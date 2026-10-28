@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: eksdemo
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: eksdemo
+
+  template:
+    metadata:
+      labels:
+        app: eksdemo
+
+    spec:
+      containers:
+        - name: eksdemo
+          image: 491891176762.dkr.ecr.us-east-1.amazonaws.com/eksdemo1:latest
+
+          ports:
+            - containerPort: 8080
