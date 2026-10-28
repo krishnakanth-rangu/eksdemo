@@ -5,7 +5,7 @@ metadata:
   name: eksdemo-service
 
 spec:
-  type: LoadBalancer
+  type: NodePort
 
   selector:
     app: eksdemo
